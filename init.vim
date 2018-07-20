@@ -1,5 +1,7 @@
 scriptencoding utf-8
 " git config for neovim thanks to Adam Oswalt
+" place in .config/nvim
+" lets see if this works
 " install plug if not found {{{1
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -84,8 +86,8 @@ Plug 'w0ng/vim-hybrid'
 Plug 'wannesm/wmgraphviz.vim'
 
 " ctags require https://github.com/universal-ctags/ctags
-Plug 'ludovicchabant/vim-gutentags', {'do': ':call plug#helptags()'}
-Plug 'majutsushi/tagbar'
+"Plug 'ludovicchabant/vim-gutentags', {'do': ':call plug#helptags()'}
+"Plug 'majutsushi/tagbar'
 call plug#end()
 
 

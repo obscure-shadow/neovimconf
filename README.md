@@ -49,3 +49,6 @@ A note if you are using this setup, everything should work like normal vim excep
     *  `:Vexplore`
     *  `:Texplore`
     * `<leader>x` (opens pane to right)
+## special thanks to:
+* Adam Oswalt, who gave me the inital.conf
+* Kyle Hudson, who got me started with this whole vim thing, way too long ago for me to be this bad at it.

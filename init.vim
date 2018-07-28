@@ -12,27 +12,43 @@ endif
 
 " plugins {{{1
 call plug#begin('~/.config/nvim/plugged')
-Plug 'christoomey/vim-tmux-navigator'
+" allows seamless integration of tmux and vim splits, going to comment this
+" pluggin out for now as I don't seem to be using tmux much but I will leave
+" it here in the event that i decide that tmux is a direction that I want to
+" go in.
+"Plug 'christoomey/vim-tmux-navigator'
 
+"shows a visual working tree of undo history
 Plug 'simnalamburt/vim-mundo'
+"fuzzy finder and fuzzy finder vim config
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+"git wrapper, needs further research
 Plug 'tpope/vim-fugitive'
+"vim linter
 Plug 'w0rp/ale'
+"autocompletion engine, currently throws random errors, need to look into this
+"more
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
+"collection of language packs for vim
 Plug 'sheerun/vim-polyglot'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+"postgreSQL pluggin for vim
 Plug 'exu/pgsql.vim'
+"tern based javascript editing support
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+"hook for deoplete for python analisys
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neco-vim'
 Plug 'zchee/deoplete-zsh'
+"needs further research
 Plug 'tpope/vim-projectionist'
-Plug 'c-brenn/phoenix.vim', { 'for': 'elixir' }
+"Plug 'c-brenn/phoenix.vim', { 'for': 'elixir' }
 Plug 'vim-scripts/ingo-library'
+"can be used to set up buffers in the current file that use different syntax
+"than the rest of the file. further research is needed.
 Plug 'vim-scripts/SyntaxRange'
 
 Plug 'kana/vim-textobj-user'
@@ -40,7 +56,7 @@ Plug 'kana/vim-textobj-entire'      "ae/ie for entire file
 Plug 'kana/vim-textobj-indent'      "ai/ii for indent block
 Plug 'kana/vim-textobj-line'        "al/il for line
 Plug 'sgur/vim-textobj-parameter'   "a,/i, for argument/parameter
-Plug 'aoswalt/vim-textobj-elixir'   "aE/iE for Elixir blocks as remapped
+"Plug 'aoswalt/vim-textobj-elixir'   "aE/iE for Elixir blocks as remapped
 Plug 'Julian/vim-textobj-variable-segment'    "av/iv for variable part
 Plug 'Chun-Yang/vim-textobj-chunk'  "ac/ic for json-ish chunk
 Plug 'whatyouhide/vim-textobj-xmlattr'  "ax/ix for xml attribute
@@ -52,11 +68,15 @@ Plug 'vim-scripts/dbext.vim'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'suan/vim-instant-markdown', { 'do': 'npm install -g instant-markdown-d' }
 Plug 'chrisbra/csv.vim'
+"shows a pop out tray with the double quote key that shows the contents of the
+"registers
 Plug 'junegunn/vim-peekaboo'
 
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
+"shows colors added in the color that they are, bot binary and color keyworkds
+"eg: red green blue #00ff00
 Plug 'systemmonkey42/vim-coloresque'
 Plug 'guns/xterm-color-table.vim'
 Plug 'vim-scripts/AnsiEsc.vim'
@@ -64,7 +84,9 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'machakann/vim-highlightedyank'
 Plug 'Raimondi/delimitMate'
+"comment out a line using gcc or gc* for other sections/blocks of comments
 Plug 'tpope/vim-commentary'
+"highlight trailing whitespace and strip on save
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'

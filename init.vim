@@ -40,6 +40,8 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install -g tern', 'for': ['javascript',
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 "hook for deoplete for python analisys
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+"used to be required for deoplete but I'm not sure it still is. further
+"investegation needed but perhaps work out the bugs with deoplete first.
 Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neco-vim'
 Plug 'zchee/deoplete-zsh'
@@ -50,7 +52,7 @@ Plug 'vim-scripts/ingo-library'
 "can be used to set up buffers in the current file that use different syntax
 "than the rest of the file. further research is needed.
 Plug 'vim-scripts/SyntaxRange'
-
+"defines new text objects besides word, paragraph, sentance
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'      "ae/ie for entire file
 Plug 'kana/vim-textobj-indent'      "ai/ii for indent block
@@ -60,20 +62,29 @@ Plug 'sgur/vim-textobj-parameter'   "a,/i, for argument/parameter
 Plug 'Julian/vim-textobj-variable-segment'    "av/iv for variable part
 Plug 'Chun-Yang/vim-textobj-chunk'  "ac/ic for json-ish chunk
 Plug 'whatyouhide/vim-textobj-xmlattr'  "ax/ix for xml attribute
-
-Plug 'thinca/vim-quickrun'
-Plug 'tpope/vim-dispatch'
-Plug 'radenling/vim-dispatch-neovim'
+"this apparently can run a section of code. documentation in :h quickrun, this
+"requires further research
+" Plug 'thinca/vim-quickrun'
+"this will build stuff and then run it and give an output, further research
+"needed
+" Plug 'tpope/vim-dispatch'
+" Plug 'radenling/vim-dispatch-neovim'
+"something to do with SQL... gonna leave it for now...
 Plug 'vim-scripts/dbext.vim'
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+"shows markdown instantly in the browser... pretty badass honestly...
 Plug 'suan/vim-instant-markdown', { 'do': 'npm install -g instant-markdown-d' }
+"handles csv files
 Plug 'chrisbra/csv.vim'
 "shows a pop out tray with the double quote key that shows the contents of the
 "registers
 Plug 'junegunn/vim-peekaboo'
-
+"powerline like status line
 Plug 'itchyny/lightline.vim'
+"shows which lines have been modified, added or where lines have been deleted
+"for git...
 Plug 'airblade/vim-gitgutter'
+"colors indents
 Plug 'nathanaelkane/vim-indent-guides'
 "shows colors added in the color that they are, bot binary and color keyworkds
 "eg: red green blue #00ff00

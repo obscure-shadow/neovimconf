@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 " pluggin out for now as I don't seem to be using tmux much but I will leave
 " it here in the event that i decide that tmux is a direction that I want to
 " go in.
-"Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 "shows a visual working tree of undo history
 Plug 'simnalamburt/vim-mundo'

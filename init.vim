@@ -18,6 +18,9 @@ call plug#begin('~/.config/nvim/plugged')
 " go in.
 Plug 'christoomey/vim-tmux-navigator'
 
+"splits line to multiple lines with gS or joins multiple lines with gS
+Plug 'AndrewRadev/splitjoin.vim'
+
 "shows a visual working tree of undo history
 Plug 'simnalamburt/vim-mundo'
 "fuzzy finder and fuzzy finder vim config

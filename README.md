@@ -16,7 +16,7 @@ how you have yours set up as well! cheers! Happy viming!
 ```
 $ brew install neovim
 ```
-* open neovim and from the vim command line run:
+* open neovim (`nvim`) and from the vim command line run:
 ```
 :checkhealth
 ```

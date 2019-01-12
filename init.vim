@@ -588,9 +588,16 @@ function! s:get_git_root()
 endfunction
 
 " override Ag command to search inside git repo
-function! fzf#vim#ag_raw(command_suffix, ...)
-  return call('fzf#vim#grep', extend(['ag --nogroup --column --color '.a:command_suffix.' '.s:get_git_root(), 1], a:000))
-endfunction
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, {'dir': FugitiveWorkTree()}, <bang>0)
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+    \ "rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>),
+    \ 1,
+    \ {'dir': FugitiveWorkTree()},
+    \ <bang>0
+  \ )
 
 " from issue, but doesn't work at all in non-repo
 "command! -bang -nargs=* GitAg\ call fzf#vim#ag(<q-args>, {'dir': systemlist('git rev-parse --show-toplevel')[0]}, <bang>0)

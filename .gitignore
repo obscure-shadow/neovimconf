@@ -1,7 +1,0 @@
-# Ignore everything
-*
-
-# except for these things.....
-!.gitignore
-!init.vim
-!README.md

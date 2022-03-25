@@ -1,0 +1,11 @@
+hg(){
+	history | grep "$1"
+}
+
+de(){
+	docker exec -it "$1" bash
+}
+
+mg() {
+  [ -n "$1" ] && mkdir -p "$@" && cd $_;
+}

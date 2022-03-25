@@ -1,6 +1,6 @@
 # These are All my alias so far, this gets loaded into the .zshrc file
 
-# alias for quick config editing
+# alias for quick config editing and viewing
 alias vim="nvim"
 alias vimrc="vim ~/.config/nvim/init.vim"
 alias omz="vim ~/.zshrc"
@@ -8,13 +8,15 @@ alias oma="vim ~/.zsh_alias"
 alias omf="vim ~/.zsh_functions"
 alias omzre="source ~/.zshrc"
 alias om10k="vim ~/.p10k.zsh"
+alias cata="cat ~/.zsh_alias"
+alias catf="cat ~/.zsh_functions"
 
 # alias for faster file handing
 alias :q="exit"
 alias nuke="rm -rf"
 
 # Git Alias
-alias gpom="git pull origin master"
+alias gpom="git pull origin master --rebase"
 alias gs="git status"
 alias gpo="git push origin"
 alias gc="git checkout"

@@ -1,18 +1,33 @@
+# These are All my alias so far, this gets loaded into the .zshrc file
+
+# alias for quick config editing
 alias vim="nvim"
 alias vimrc="vim ~/.config/nvim/init.vim"
 alias omz="vim ~/.zshrc"
+alias oma="vim ~/.zsh_alias"
+alias omf="vim ~/.zsh_functions"
 alias omzre="source ~/.zshrc"
+alias om10k="vim ~/.p10k.zsh"
+
+# alias for faster file handing
 alias :q="exit"
 alias nuke="rm -rf"
-alias tf="terraform"
-alias tfi="tf init"
-alias sbu="sam build -u && sam local invoke -e event.json"
+
+# Git Alias
 alias gpom="git pull origin master"
 alias gs="git status"
 alias gpo="git push origin"
 alias gc="git checkout"
 alias gpo="git push origin"
-alias om10k="vim ~/.p10k.zsh"
+
+# terraform Alias
+alias tf="terraform"
+alias tfi="tf init"
+
+# AWS Sam Alias
+alias sbu="sam build -u && sam local invoke -e event.json"
+
+# AWS Creds alias
 alias als="aws_login login staging"
 alias alp="aws_login login production"
 alias ecr="aws_ecr_login"
